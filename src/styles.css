@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --header-bg-color: #1BC48C;
+  --white-text-color: #ffffff;
+  --black-text-color: #000000;
+  --footer-bg-color: #D3CCCC;
+}
+
+html{
+  min-height:100%;/* make sure it is at least as tall as the viewport */
+  position:relative;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  height: 100%;
+}

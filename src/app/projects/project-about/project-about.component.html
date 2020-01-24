@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="preview">
+    <div class="back">
+      <img src="/assets/back-arrow.png" alt="">
+      <h3 class="back-link" routerLink="/projects">Back to projects</h3>
+    </div>
+    <app-project [project]="currentProject"></app-project>
+  </div>
+  <div class="info">
+    <h3>Features</h3>
+    <div class="features" #features>
+    </div>
+    <h3>Tools:</h3>
+    <p>{{currentProject.tools}}</p>
+    <h3>What I learned:</h3>
+    <p>{{currentProject.learned}}</p>
+    <div class="view-buttons">
+      <a href="{{currentProject.codeLink}}"><button class="code">View Code</button></a>
+      <a href="{{currentProject.liveLink}}"><button class="live">View Live</button></a>
+    </div>
+  </div>
+</div>

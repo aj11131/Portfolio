@@ -1,0 +1,28 @@
+.container{
+  /* width: 65%;
+  margin: 0 auto; */
+  display: flex;
+  /* height: 70%; */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 span {
+  font-size: 1rem;
+  color: gray;
+}
+
+.projects {
+  margin: 1rem;
+}
+
+.projects:hover {
+  box-shadow: 10px 5px 5px grey;
+  transition-timing-function: ease-in-out;
+  transition: 0.1s;
+  transform: translate(0, -15px);
+}

@@ -1,0 +1,171 @@
+header{
+  color: black;
+  height: 150px;
+  width: 100%;
+}
+
+.name {
+  z-index: 999;
+  color: var(--white-text-color);
+}
+
+h1 {
+  margin: 0 0 0 10px;
+  z-index: 1;
+  font-size: 2rem;
+}
+
+h3 {
+  margin: 0 0 0 10px;
+  z-index: 1;
+  font-size: 1rem;
+}
+
+li {
+  display: inline;
+  margin: 3rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: black;
+}
+
+.side-rectangle {
+  position: absolute;
+  top: 0;
+  left: 3%;
+  width: 12%;
+  min-width: 230px;
+  height: auto;
+  min-height: 70px;
+  /* background-image: linear-gradient(to bottom left, #1BC48C, #24e0a1); */
+  background-color: var(--header-bg-color);
+  z-index: 2;
+}
+
+.side-rectangle::after {
+  width: 0px;
+  height: 0px;
+  background: #fff;
+  content: '';
+  position: absolute;
+  bottom: 0;
+}
+
+.side-rectangle::after {
+  right: 0;
+  border-top: 10px solid #1BC48C;
+  border-right: 10px solid white;
+  border-left: 10px solid #1BC48C;
+  border-bottom: 10px solid white;
+}
+
+
+nav {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  float: right;
+  margin-right: 3rem;
+}
+
+nav a {
+  opacity: 1;
+  position: relative;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: black;
+  position: absolute;
+  top: -.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  transform: scale(1,1);
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 900px) {
+
+  nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: auto;
+    background-color: white;
+    z-index: 998;
+    border-left: rgba(0, 0, 0, .25) 1px solid;
+    padding-top: 0;
+    padding-right: 0;
+    margin-right: 0;
+    display: fixed;
+    justify-content: center;
+    transform: scale(0,1);
+    transform-origin: right;
+    transition: transform 150ms ease-in-out;
+  }
+
+  li {
+    display: block;
+    text-align: center;
+    margin-top: 3rem 0;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  nav a::before {
+    background: white;
+  }
+
+  .nav {
+    margin-top: 4rem;
+    padding-left: 0;
+    opacity: 0;
+  }
+
+  .side-rectangle {
+    left: 0;
+    width: 30%;
+    height: 70px;
+    background-color: var(--header-bg-color);
+  }
+
+  .menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    float: right;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    z-index: 999;
+  }
+
+  .shade {
+    display: none;
+    position: absolute;
+    content: '';
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:hidden;
+    background-color: rgba(0, 0, 0, .25);
+    z-index: 998;
+  }
+}
