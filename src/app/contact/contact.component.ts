@@ -33,23 +33,25 @@ export class ContactComponent implements OnInit {
       this.email.sendMessage(message).subscribe(
         response => {
           if (response === 'sent') {
-            this.userMessage.nativeElement.classList.add('success');
-            this.userMessage.nativeElement.innerText = 'Message sent!';
-            setTimeout(() => {
-              this.userMessage.nativeElement.innerText = '';
-              this.userMessage.nativeElement.classList.remove('success');
-            }, 3000);
+            this.configureUserMessage('success', 'Message Sent!');
+          } else if (response === 'failure') {
+            this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.');
           }
-        }
+        },
+        err => console.log(err)
       );
       this.contactForm.reset();
     } else {
-      this.userMessage.nativeElement.classList.add('failure');
-      this.userMessage.nativeElement.innerText = 'Please enter a valid Email and message';
-      setTimeout(() => {
-        this.userMessage.nativeElement.innerText = '';
-        this.userMessage.nativeElement.classList.remove('failure');
-      }, 3000);
+      this.configureUserMessage('failure', 'Please enter valid Email address and message.');
     }
+  }
+
+  configureUserMessage(className: string, message: string) {
+    this.userMessage.nativeElement.classList.add(className);
+    this.userMessage.nativeElement.innerText = message;
+    setTimeout(() => {
+      this.userMessage.nativeElement.innerText = '';
+      this.userMessage.nativeElement.classList.remove(className);
+    }, 3000);
   }
 }

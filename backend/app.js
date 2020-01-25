@@ -20,9 +20,6 @@ app.use((req, res, next) => {
 });
 
 app.post('/email', async (req, res, next) => {
-  console.log(req.body);
-  console.log(process.env.EMAIL);
-  console.log(process.env.PASSWORD);
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -30,7 +27,7 @@ app.post('/email', async (req, res, next) => {
       user: process.env.EMAIL,
       pass: process.env.PASSWORD
     }
-  })
+  });
 
   const mailOptions = {
     from: process.env.EMAIL,
@@ -38,12 +35,12 @@ app.post('/email', async (req, res, next) => {
     subject: "*FROM YOUR WEBSITE* " + req.body.subject,
     html: '<p>' + req.body.message + '<p>'
   }
-  res.end('sent');
 
-  transporter.sendMail(mailOptions, function(err, info) {
-    if (err) {
-
+  transporter.sendMail(mailOptions, function(error) {
+    if (error) {
+      res.end('failure');
     } else {
+      res.end('sent');
     }
-  });
+  })
 });
