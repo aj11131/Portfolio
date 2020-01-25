@@ -38,7 +38,9 @@ export class ContactComponent implements OnInit {
             this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.');
           }
         },
-        err => console.log(err)
+        err => {
+          this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.');
+        }
       );
       this.contactForm.reset();
     } else {
