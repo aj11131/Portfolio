@@ -74,7 +74,12 @@ button:hover{
 
 @media (max-width: 900px) {
   .container{
-    width: 95%
+    width: 100%
+  }
+
+  .fields {
+    width: 95%;
+    margin: 0 auto;
   }
 }
 
