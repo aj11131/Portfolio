@@ -1,6 +1,6 @@
 header{
   color: black;
-  height: 150px;
+  height: 6.25em;
   width: 100%;
 }
 
@@ -37,9 +37,9 @@ a {
   top: 0;
   left: 3%;
   width: 12%;
-  min-width: 230px;
+  min-width: 14.375rem;
   height: auto;
-  min-height: 70px;
+  min-height: 4.375rem;
   /* background-image: linear-gradient(to bottom left, #1BC48C, #24e0a1); */
   background-color: var(--header-bg-color);
   z-index: 2;
@@ -143,14 +143,14 @@ nav a:hover::before {
   .side-rectangle {
     left: 0;
     width: 30%;
-    height: 70px;
+    height: 4.375px;
     background-color: var(--header-bg-color);
   }
 
   .menu {
     display: block;
     position: relative;
-    width: 30px;
+    width: 1.875rem;
     float: right;
     margin-top: 1rem;
     margin-right: 1rem;
