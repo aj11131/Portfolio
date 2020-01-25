@@ -110,7 +110,7 @@ nav a:hover::before {
     padding-top: 0;
     padding-right: 0;
     margin-right: 0;
-    display: fixed;
+    display: flex;
     justify-content: center;
     transform: scale(0,1);
     transform-origin: right;
@@ -120,7 +120,8 @@ nav a:hover::before {
   li {
     display: block;
     text-align: center;
-    margin-top: 3rem 0;
+    margin: 2rem;
+    margin-top: 0;
   }
 
   a {

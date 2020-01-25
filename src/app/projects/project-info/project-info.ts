@@ -4,7 +4,7 @@ export const projectInfo: Project[] = [
   {
     title: 'Display Weather',
     description: 'Displays the weather conditions of your current location and any searched location.',
-    img: '/assets/weatherApp.PNG',
+    img: '/assets/weatherApp--small.png',
     tools: 'HTML, CSS, JavaScript, TypeScript, Node.js, Express, Angular 2+, RxJS, External APIs, AWS',
     features: `
       <ul>
@@ -17,13 +17,13 @@ export const projectInfo: Project[] = [
     `,
     // tslint:disable-next-line: max-line-length
     learned: 'This app gave me an excellent opportunity to begin experimenting with RxJS and external API’s. Connecting location and weather API and getting them to work together was a great learning experience. The biggest challenge I faced in this project was getting the weather information on the page to update after selecting a different location without reloading the page. I found behavior subjects in RxJS as an invaluable tool for this. They allowed me to easily notify the other components in the app of the change in location.',
-    codeLink: '',
-    liveLink: ''
+    codeLink: 'https://github.com/aj11131/Weather-App',
+    liveLink: 'https://weather-app11131.netlify.com'
   },
   {
     title: 'Note Editor',
     description: 'Create, edit, search, and delete notes stored locally on browser.',
-    img: '/assets/notesApp.PNG',
+    img: '/assets/notesApp--small.png',
     tools: 'HTML, CSS, JavaScript, TypeScript, Angular 2+, RxJS, AWS',
     features: `
     <ul>
@@ -36,13 +36,13 @@ export const projectInfo: Project[] = [
   `,
   // tslint:disable-next-line: max-line-length
   learned: 'This is the first project I built myself on Angular. I learned a lot about the core features of Angular including components, services, directives, pipes, routing, and modules. What became apparent to me very quickly was how useful services are for communication between components and sharing code. Using a service I was able to create a search bar that is able to quickly search through all the notes.',
-  codeLink: '',
-  liveLink: ''
+  codeLink: 'https://github.com/aj11131/Note-Editor',
+  liveLink: 'https://note-editor11131.netlify.com'
   },
   {
     title: 'Scientific Calculator',
     description: 'Displays the weather conditions of your current location and any searched location.',
-    img: '/assets/weatherApp.PNG',
+    img: '/assets/scientificCalculator--small.png',
     tools: 'HTML, CSS, JavaScript, TypeScript, Angular 2+, RxJS',
     features: `
     <ul>
@@ -57,7 +57,7 @@ export const projectInfo: Project[] = [
   `,
     // tslint:disable-next-line: max-line-length
     learned: 'In this project, I learned how useful Angular is for creating reusable components. Instead of creating a button element for each button on the calculator, I was able to generate the buttons from an array of button objects using the NgFor directive. The biggest obstacle of this project was dealing with nested operations such as sin(cos(tan(45))). To solve this problem, I used a recursive function that solves the nested operations from inside out.',
-    codeLink: '',
-    liveLink: ''
+    codeLink: 'https://github.com/aj11131/Scientific-Calculator',
+    liveLink: 'https://scientific-calculator11131.netlify.com'
   },
 ];

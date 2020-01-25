@@ -38,7 +38,7 @@ app.post('/email', async (req, res, next) => {
     subject: "*FROM YOUR WEBSITE* " + req.body.subject,
     html: '<p>' + req.body.message + '<p>'
   }
-  res.end('It worked');
+  res.end('sent');
 
   transporter.sendMail(mailOptions, function(err, info) {
     if (err) {

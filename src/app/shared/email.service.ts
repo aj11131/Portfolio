@@ -14,6 +14,6 @@ export class EmailService {
   serverUrl = environment.baseUrl;
 
   sendMessage(message: Email) {
-    return this.http.post(`${this.serverUrl}/email`, message);
+    return this.http.post(`${this.serverUrl}/email`, message, {responseType: 'text'});
   }
 }

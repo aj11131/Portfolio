@@ -1,7 +1,7 @@
 <div class="container">
   <app-header class="header"></app-header>
   <div class="content">
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="onActivate()"></router-outlet>
   </div>
   <app-footer class="footer"></app-footer>
 </div>

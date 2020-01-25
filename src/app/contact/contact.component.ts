@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { EmailService } from '../shared/email.service';
 
@@ -8,6 +8,7 @@ import { EmailService } from '../shared/email.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  @ViewChild('userMessage', {static: true}) userMessage: ElementRef;
   contactForm: FormGroup;
 
   constructor(private email: EmailService) { }
@@ -30,8 +31,25 @@ export class ContactComponent implements OnInit {
         message: this.contactForm.value.message
       };
       this.email.sendMessage(message).subscribe(
-        response => console.log(response)
+        response => {
+          if (response === 'sent') {
+            this.userMessage.nativeElement.classList.add('success');
+            this.userMessage.nativeElement.innerText = 'Message sent!';
+            setTimeout(() => {
+              this.userMessage.nativeElement.innerText = '';
+              this.userMessage.nativeElement.classList.remove('success');
+            }, 3000);
+          }
+        }
       );
+      this.contactForm.reset();
+    } else {
+      this.userMessage.nativeElement.classList.add('failure');
+      this.userMessage.nativeElement.innerText = 'Please enter a valid Email and message';
+      setTimeout(() => {
+        this.userMessage.nativeElement.innerText = '';
+        this.userMessage.nativeElement.classList.remove('failure');
+      }, 3000);
     }
   }
 }

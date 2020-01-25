@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('document:click', ['$event'])
   public documentClick(event: Event): void {
-    console.log(event.target);
     // tslint:disable-next-line: max-line-length
     if (this.menuDisplay && event.target !== this.navigation.nativeElement && event.target !== this.links.nativeElement && event.target !== this.menu.nativeElement) {
       this.toggleMenuView(true);

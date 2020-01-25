@@ -2,7 +2,10 @@
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <div class="header-top"></div>
     <header>
-      <h3>Contact Me</h3>
+      <div>
+        <h3>Contact Me</h3>
+        <p>Email: austin.scott.j@gmail.com</p>
+      </div>
     </header>
     <label for="name">Name:</label>
     <input type="text" id="name" formControlName="name">
@@ -19,6 +22,8 @@
     <label for="message">Message:</label>
     <textarea type="text" id="message" formControlName="message"></textarea>
     <br>
+
+    <div class="userMessage" #userMessage></div>
 
     <div class="button-container">
       <button type="submit">Send Message</button>

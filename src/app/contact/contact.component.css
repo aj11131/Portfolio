@@ -18,7 +18,7 @@ form {
 
 header {
   background-color: var(--footer-bg-color);
-  height: 100px;
+  height: 6.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +27,13 @@ header {
 
 h3 {
   font-size: 3rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+p{
+  margin: 0;
+  text-align: center;
 }
 
 input, textarea {
@@ -69,4 +76,21 @@ button:hover{
   .container{
     width: 95%
   }
+}
+
+.userMessage {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.success {
+  background-color: #ccff99;
+  border: 2px solid green;
+  border-radius: 5px;
+}
+
+.failure {
+  background-color: #ff9999;
+  border: 2px solid red;
+  border-radius: 5px;
 }

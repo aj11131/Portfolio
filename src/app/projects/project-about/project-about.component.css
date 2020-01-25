@@ -3,6 +3,7 @@
   width: 80%;
   display: flex;
   justify-content: space-between ;
+  flex-wrap: wrap;
 }
 
 .back {
@@ -15,7 +16,8 @@
 }
 
 .preview {
-  width: 30%;
+  width: 40%;
+  min-width: 15rem;
 }
 
 .info {
@@ -40,4 +42,19 @@ button:hover{
 
 a {
   color: black;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+
+  .preview {
+    width: 100%;
+  }
+
+  .info {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
 }
