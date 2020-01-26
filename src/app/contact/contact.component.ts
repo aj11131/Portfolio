@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { EmailService } from '../shared/email.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -9,9 +10,10 @@ import { EmailService } from '../shared/email.service';
 })
 export class ContactComponent implements OnInit {
   @ViewChild('userMessage', {static: true}) userMessage: ElementRef;
+  @ViewChild('sendButton', {static: true}) sendButton: ElementRef;
   contactForm: FormGroup;
 
-  constructor(private email: EmailService) { }
+  constructor(private email: EmailService, private router: Router) { }
 
   ngOnInit() {
     this.contactForm = new FormGroup({
@@ -30,30 +32,34 @@ export class ContactComponent implements OnInit {
         subject: this.contactForm.value.subject,
         message: this.contactForm.value.message
       };
+      this.sendButton.nativeElement.innerText = 'Sending...';
       this.email.sendMessage(message).subscribe(
         response => {
           if (response === 'sent') {
-            this.configureUserMessage('success', 'Message Sent!');
+            this.router.navigate(['confirm']);
           } else if (response === 'failure') {
-            this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.');
+            this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.', 7000);
+            this.sendButton.nativeElement.innerText = 'Send Message';
           }
         },
         err => {
-          this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.');
+          this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.', 7000);
+          this.sendButton.nativeElement.innerText = 'Send Message';
         }
       );
       this.contactForm.reset();
     } else {
-      this.configureUserMessage('failure', 'Please enter valid Email address and message.');
+      this.configureUserMessage('failure', 'Please enter valid Email address and message.', 3000);
+      this.sendButton.nativeElement.innerText = 'Send Message';
     }
   }
 
-  configureUserMessage(className: string, message: string) {
+  configureUserMessage(className: string, message: string, timeout: number) {
     this.userMessage.nativeElement.classList.add(className);
     this.userMessage.nativeElement.innerText = message;
     setTimeout(() => {
       this.userMessage.nativeElement.innerText = '';
       this.userMessage.nativeElement.classList.remove(className);
-    }, 3000);
+    }, timeout);
   }
 }
