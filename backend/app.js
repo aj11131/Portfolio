@@ -32,7 +32,7 @@ app.post('/email', async (req, res, next) => {
   const mailOptions = {
     from: process.env.EMAIL,
     to: process.env.EMAIL,
-    subject: "*FROM YOUR WEBSITE* " + req.body.subject,
+    subject: `*FROM YOUR WEBSITE* email: ${req.body.email}, from: ${req.body.name}, ${req.body.subject}`,
     html: '<p>' + req.body.message + '<p>'
   }
 
