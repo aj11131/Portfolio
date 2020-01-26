@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
         subject: this.contactForm.value.subject,
         message: this.contactForm.value.message
       };
-      this.sendButton.nativeElement.innerText = 'Sending...';
+      this.sendButton.nativeElement.innerText = 'Sending';
       this.email.sendMessage(message).subscribe(
         response => {
           if (response === 'sent') {
