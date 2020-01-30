@@ -16,7 +16,7 @@ export const projectInfo: Project[] = [
       </ul>
     `,
     // tslint:disable-next-line: max-line-length
-    learned: 'This app gave me an excellent opportunity to begin experimenting with RxJS and external API’s. Connecting location and weather API and getting them to work together was a great learning experience. The biggest challenge I faced in this project was getting the weather information on the page to update after selecting a different location without reloading the page. I found behavior subjects in RxJS as an invaluable tool for this. They allowed me to easily notify the other components in the app of the change in location.',
+    learned: 'This app gave me an excellent opportunity to begin experimenting with RxJS and external API’s. Connecting location and weather API and getting them to work together was a great learning experience. One challenge I faced in this project was getting the weather information on the page to update after selecting a different location without reloading the page. I found behavior subjects in RxJS an invaluable tool for this. They allowed me to easily notify the other components in the app of the change. Another challenge I faced was minimizing the amount of requests made by the autocomplete location search. I didn’t want every keystroke to trigger a request. The debounce operator in RxJS Allowed me to minimize the amount of requests by waiting until the input was stable for a specified amount of time before making requests.',
     codeLink: 'https://github.com/aj11131/Weather-App',
     liveLink: 'https://weather-app11131.netlify.com'
   },
@@ -32,10 +32,12 @@ export const projectInfo: Project[] = [
       <li>Notes persist in local storage</li>
       <br>
       <li>Search through existing notes</li>
+      <br>
+      <li>Warn users before leaving a new note page without saving changes</li>
     </ul>
   `,
   // tslint:disable-next-line: max-line-length
-  learned: 'This is the first project I built myself on Angular. I learned a lot about the core features of Angular including components, services, directives, pipes, routing, and modules. What became apparent to me very quickly was how useful services are for communication between components and sharing code. Using a service I was able to create a search bar that is able to quickly search through all the notes.',
+  learned: 'This is the first project I built myself on Angular. I learned a lot about the core features of Angular including components, services, directives, pipes, routing, guards, and modules. What became apparent to me very quickly was how useful services are for communication between components and sharing code. Using a service I was able to create a search bar that is able to quickly search through all the notes. The biggest obstacle I faced during this project was dynamically sizing the textarea for the title and note body input. I didn’t want there to be a limit on the size of the text area, but instead I wanted the text area to be able to grow as the user inputed more information. I was able to accomplish this using a custom Angular directive.',
   codeLink: 'https://github.com/aj11131/Note-Editor',
   liveLink: 'https://note-editor11131.netlify.com'
   },

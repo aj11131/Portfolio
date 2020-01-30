@@ -32,18 +32,18 @@ export class ContactComponent implements OnInit {
         subject: this.contactForm.value.subject,
         message: this.contactForm.value.message
       };
-      this.sendButton.nativeElement.innerText = 'Sending';
+      this.sendButton.nativeElement.innerText = 'Sending...';
       this.email.sendMessage(message).subscribe(
         response => {
           if (response === 'sent') {
             this.router.navigate(['confirm']);
           } else if (response === 'failure') {
-            this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.', 7000);
+            this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.', 10000);
             this.sendButton.nativeElement.innerText = 'Send Message';
           }
         },
         err => {
-          this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.', 7000);
+          this.configureUserMessage('failure', 'Message was unable to send. Try again or contact me at austin.scott.j@gmail.com.', 10000);
           this.sendButton.nativeElement.innerText = 'Send Message';
         }
       );
