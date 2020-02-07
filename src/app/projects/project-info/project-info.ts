@@ -43,7 +43,7 @@ export const projectInfo: Project[] = [
   },
   {
     title: 'Scientific Calculator',
-    description: 'Displays the weather conditions of your current location and any searched location.',
+    description: 'Calculator that includes standard and scientific interface.',
     img: '/assets/scientificCalculator--small.png',
     tools: 'HTML, CSS, JavaScript, TypeScript, Angular 2+, RxJS',
     features: `
