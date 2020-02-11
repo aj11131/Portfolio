@@ -5,7 +5,7 @@ export const projectInfo: Project[] = [
     title: 'Display Weather',
     description: 'Displays the weather conditions of your current location and any searched location.',
     img: '/assets/weatherApp--small.png',
-    tools: 'HTML, CSS, JavaScript, TypeScript, Node.js, Express, Angular 2+, RxJS, External APIs, Google Places API, DarkSky weather API',
+    tools: 'HTML, CSS, JavaScript, TypeScript, Node.js, Express, Angular 2+, RxJS, Google Places API, DarkSky weather API',
     features: `
       <ul>
         <li>Display the current weather and a 7 day forecast of your current and any searched location</li>
