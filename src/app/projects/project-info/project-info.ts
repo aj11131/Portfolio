@@ -5,7 +5,7 @@ export const projectInfo: Project[] = [
     title: 'Display Weather',
     description: 'Displays the weather conditions of your current location and any searched location.',
     img: '/assets/weatherApp--small.png',
-    tools: 'HTML, CSS, JavaScript, TypeScript, Node.js, Express, Angular 2+, RxJS, External APIs, AWS',
+    tools: 'HTML, CSS, JavaScript, TypeScript, Node.js, Express, Angular 2+, RxJS, External APIs, Google Places API, DarkSky weather API',
     features: `
       <ul>
         <li>Display the current weather and a 7 day forecast of your current and any searched location</li>
@@ -16,7 +16,7 @@ export const projectInfo: Project[] = [
       </ul>
     `,
     // tslint:disable-next-line: max-line-length
-    learned: 'This app gave me an excellent opportunity to begin experimenting with RxJS and external API’s. Connecting location and weather API and getting them to work together was a great learning experience. One challenge I faced in this project was getting the weather information on the page to update after selecting a different location without reloading the page. I found behavior subjects in RxJS an invaluable tool for this. They allowed me to easily notify the other components in the app of the change. Another challenge I faced was minimizing the amount of requests made by the autocomplete location search. I didn’t want every keystroke to trigger a request. The debounce operator in RxJS Allowed me to minimize the amount of requests by waiting until the input was stable for a specified amount of time before making requests.',
+    learned: 'This app gave me an excellent opportunity to begin experimenting with RxJS and external API’s. Connecting the location and weather API and getting them to work together was a great learning experience. One challenge I faced in this project was getting the weather information on the page to update after selecting a different location without reloading the page. I found behavior subjects in RxJS an invaluable tool for this. They allowed me to easily notify the other components in the app of the change. Another challenge I faced was minimizing the amount of requests made by the autocomplete location search. I didn’t want every keystroke to trigger a request. The debounce operator in RxJS Allowed me to minimize the amount of requests by waiting until the input was stable for a specified amount of time before making requests.',
     codeLink: 'https://github.com/aj11131/Weather-App',
     liveLink: 'https://weather-app11131.netlify.com'
   },
@@ -24,7 +24,7 @@ export const projectInfo: Project[] = [
     title: 'Note Editor',
     description: 'Create, edit, search, and delete notes stored locally on browser.',
     img: '/assets/notesApp--small.png',
-    tools: 'HTML, CSS, JavaScript, TypeScript, Angular 2+, RxJS, AWS',
+    tools: 'HTML, CSS, JavaScript, TypeScript, Angular 2+, RxJS',
     features: `
     <ul>
       <li>Create, edit, and Delete notes</li>
@@ -50,7 +50,7 @@ export const projectInfo: Project[] = [
     <ul>
       <li>Includes standard and scientific calculator interface</li>
       <br>
-      <li>Input data using the buttons or keyboard</li>
+      <li>Input data using buttons or the keyboard</li>
       <br>
       <li>Toggle between degrees and radians for  trigonometric functions</li>
       <br>
