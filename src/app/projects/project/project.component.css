@@ -9,7 +9,6 @@
 }
 
 .header-top {
-  content: '';
   width: 100%;
   height: 10px;
   background-color: var(--header-bg-color);

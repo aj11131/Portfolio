@@ -6,6 +6,10 @@
   flex-wrap: wrap;
 }
 
+p {
+  font-size: 1rem;
+}
+
 .back {
   display: flex;
   align-items: center;
