@@ -24,10 +24,7 @@ export class ProjectAboutComponent implements OnInit {
         this.currentProject = project;
       }
     });
-    console.log(this.currentProject.features);
     this.features.nativeElement.innerHTML = this.currentProject.features;
-
-    console.log(this.currentProject);
   }
 
 }
