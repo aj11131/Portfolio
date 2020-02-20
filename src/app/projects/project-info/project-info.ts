@@ -54,7 +54,7 @@ export const projectInfo: Project[] = [
       <br>
       <li>Toggle between degrees and radians for  trigonometric functions</li>
       <br>
-      <li>Includes a secondary display window that calculates results from the primary display as they are keyed in.</li>
+      <li>Includes a secondary display window that calculates results from the primary display as input is keyed in.</li>
     </ul>
   `,
     // tslint:disable-next-line: max-line-length

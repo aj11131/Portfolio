@@ -28,6 +28,10 @@ p {
   width: 50%;
 }
 
+.view-buttons {
+  margin-bottom: 1rem;
+}
+
 button {
   background: none;
 	color: inherit;
