@@ -17,7 +17,7 @@ export const projectInfo: Project[] = [
     `,
     // tslint:disable-next-line: max-line-length
     learned: 'I designed this app to use a single reusable component for displaying the time. Depending on the mode, it displays the meridiem and milliseconds field and allows user input. This made it a challenge for all the different components to communicate effectively. RxJs was useful for this.',
-    codeLink: 'https://https://github.com/aj11131/clock-timer-stopwatch',
+    codeLink: 'https://github.com/aj11131/clock-timer-stopwatch',
     liveLink: 'https://time-app11131.netlify.com'
   },
   {
