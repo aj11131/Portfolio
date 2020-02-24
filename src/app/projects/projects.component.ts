@@ -17,6 +17,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   navigateToProject(project: Project) {
+    console.log(project.title);
     this.router.navigate([project.title], {relativeTo: this.route});
   }
 

@@ -2,6 +2,25 @@ import { Project } from 'src/app/shared/project.model';
 
 export const projectInfo: Project[] = [
   {
+    title: 'Clock-Timer-Stopwatch',
+    description: 'Includes a clock, timer, and stopwatch',
+    img: '/assets/timeApp--small.png',
+    tools: 'HTML, CSS, JavaScript, TypeScript, Angular 2+, RxJS',
+    features: `
+      <ul>
+        <li>Gets and displays the current time using the JavaScript Date object.</li>
+        <br>
+        <li>Accepts user input and counts down to zero and then plays a beeping noise. The timer can be paused and canceled.</li>
+        <br>
+        <li>A typical stopwatch that can be started, stopped, and reset. Lap times can also be recorded.</li>
+      </ul>
+    `,
+    // tslint:disable-next-line: max-line-length
+    learned: 'I designed this app to use a single reusable component for displaying the time. Depending on the mode, it displays the meridiem and milliseconds field and allows user input. This made it a challenge for all the different components to communicate effectively. RxJs was useful for this.',
+    codeLink: 'https://https://github.com/aj11131/clock-timer-stopwatch',
+    liveLink: 'https://time-app11131.netlify.com'
+  },
+  {
     title: 'Display Weather',
     description: 'Displays the weather conditions of your current location and any searched location.',
     img: '/assets/weatherApp--small.png',
