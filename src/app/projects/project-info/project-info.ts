@@ -16,7 +16,7 @@ export const projectInfo: Project[] = [
       </ul>
     `,
     // tslint:disable-next-line: max-line-length
-    learned: 'I designed this app to use a single reusable component for displaying the time. Depending on the mode, it displays the meridiem and milliseconds field and allows user input. This made it a challenge for all the different components to communicate effectively. RxJs was useful for this.',
+    about: 'A time app that includes a clock that shows the current time, a timer that accepts user input then counts to zero and beeps, and a stopwatch. This app uses a single reusable component for displaying the time. Depending on the mode, it displays the meridiem and milliseconds field and allows user input.',
     codeLink: 'https://github.com/aj11131/clock-timer-stopwatch',
     liveLink: 'https://time-app11131.netlify.com'
   },
@@ -35,7 +35,7 @@ export const projectInfo: Project[] = [
       </ul>
     `,
     // tslint:disable-next-line: max-line-length
-    learned: 'This app gave me an excellent opportunity to begin experimenting with RxJS and external API’s. Connecting the location and weather API and getting them to work together was a great learning experience. One challenge I faced in this project was getting the weather information on the page to update after selecting a different location without reloading the page. I found behavior subjects in RxJS an invaluable tool for this. They allowed me to easily notify the other components in the app of the change. Another challenge I faced was minimizing the amount of requests made by the autocomplete location search. I didn’t want every keystroke to trigger a request. The debounce operator in RxJS Allowed me to minimize the amount of requests by waiting until the input was stable for a specified amount of time before making requests.',
+    about: `The user's current location is found using the navigator.geolocation.getCurrentPosition. If the user declines to share their position, the app will default to finding the current location with the user's IP address. Once the user is located, the coordinates are sent to Google's Places API and Dark Sky's weather API. To change the displayed location, the search bar can be used. Input from this searchbar will send a request to Google's Places API and return a list of the 5 top matches of the current input. If one of these matches is selected, the data associated with that result is emitted using an RxJs Subject that the weather display is subscribed to. These components will update displaying the new data.`,
     codeLink: 'https://github.com/aj11131/Weather-App',
     liveLink: 'https://weather-app11131.netlify.com'
   },
@@ -56,7 +56,7 @@ export const projectInfo: Project[] = [
     </ul>
   `,
   // tslint:disable-next-line: max-line-length
-  learned: 'This is the first project I built myself on Angular. I learned a lot about the core features of Angular including components, services, directives, pipes, routing, guards, and modules. What became apparent to me very quickly was how useful services are for communication between components and sharing code. Using a service I was able to create a search bar that is able to quickly search through all the notes. The biggest obstacle I faced during this project was dynamically sizing the textarea for the title and note body input. I didn’t want there to be a limit on the size of the text area, but instead I wanted the text area to be able to grow as the user inputed more information. I was able to accomplish this using a custom Angular directive.',
+  about: 'To add a new note click the new tab located in the header. Here you have the option to input a title and a note body. Neither of this fields are required. The title block will default to "Untitled" and the body will default to blank. If the user attempts to leave the page without saving the note, the app will ask the user wants to leave without saving their changes. To edit an already added note, in the note list click the note. This will navigate to the edit page. To begin editing, click the pencil icon in the top right of the page. Now you are able to edit the text. As new input is entered, the note will automatically be saved. When done, click save to return to the note list. On this page, notes can also be deleted with the delete button. The user will be asked to confirm before deleting. To display the search bar, click the magnifying glass icon. Input entered in the search bar will filter existing notes to only those that contain the entered string.',
   codeLink: 'https://github.com/aj11131/Note-Editor',
   liveLink: 'https://note-editor11131.netlify.com'
   },
@@ -77,7 +77,7 @@ export const projectInfo: Project[] = [
     </ul>
   `,
     // tslint:disable-next-line: max-line-length
-    learned: 'In this project, I learned how useful Angular is for creating reusable components. Instead of creating a button element for each button on the calculator, I was able to generate the buttons from an array of button objects using the NgFor directive. The biggest obstacle of this project was dealing with nested operations such as sin(cos(tan(45))). To solve this problem, I used a recursive function that solves the nested operations from inside out.',
+    about: `To calculate input, the string that appears in the calculator display is passed to a formatting function that uses regular expressions to replace functions such as sin() with Math.sin(). This formatting function also handles different muliplication scenarios such as multplication using parenthesis and multiplication of a numbers situated by a letter/symbol ie. (2)(3) and 2π. The formatted string is then evaluated. If there are nested calculator functions such as sin(cos()), the formatting function is called recursively and the inner function is evaluated and then the outer function. How the trigonometric functions are calculated can be toggled between degrees and radians using the switch located near the main display.`,
     codeLink: 'https://github.com/aj11131/Scientific-Calculator',
     liveLink: 'https://scientific-calculator11131.netlify.com'
   },

@@ -4,7 +4,7 @@ export interface Project {
   img: string;
   tools: string;
   features: string;
-  learned: string;
+  about: string;
   codeLink: string;
   liveLink: string;
 }
